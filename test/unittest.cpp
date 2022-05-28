@@ -1,13 +1,25 @@
 #include <gtest/gtest.h>
+#include <cmath>
+#include "../src/extends/sum.h"
+#include "../src/extends/dod.h"
+#include "../src/extends/var.h"
 
-TEST(PASSED, alwaysIsTrue) {
-  bool TRUE = true;
+using namespace nsDod;
+using namespace nsSum;
+using namespace nsVar;
 
-  EXPECT_EQ(TRUE, true);
-}
+TEST(TESTS, test1)
+{
+  double res, arctan;
+  s = 0;
+  x = -10;
+  e = 0.001;
+  int n = 0;
 
-TEST(FAILED, alwaysIsFalse) {
-  bool TRUE = true;
+  sum();
+  res = round(s / e) * e;
 
-  EXPECT_EQ(TRUE, false);
+  arctan = round(atan(x) / e) * e;
+
+  EXPECT_EQ(res, arctan);
 }

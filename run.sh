@@ -3,9 +3,9 @@ s="$2"
 
 echo $r;
 
-if ([ "$f" == "-t" ] || [ "$s" == "-t" ]) && [ -d "./build" ]; then
-  rm -r "build"
-fi
+# if ([ "$f" == "-t" ] || [ "$s" == "-t" ]) && [ -d "./build" ]; then
+#   rm -r "build"
+# fi
 
 [ ! -d "./build" ] && mkdir "./build"
 
